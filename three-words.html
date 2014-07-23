@@ -55,7 +55,8 @@
 			  </div><!-- /.container-fluid -->
 			</nav>
 
-			<style> /*Card Styles*/
+			<style> 
+				/*Card Styles*/
 				.card-container {
 					-webkit-perspective: 1000;
 					-moz-perspective: 1000;
@@ -66,12 +67,6 @@
 					height: 9em;
 					width: 100%;
 				}
-
-/*				.card-container:hover .card {
-					-webkit-transform: rotateY(180deg);
-					-moz-transform: rotateY(180deg);
-					transform: rotateY(180deg);
-				}*/
 
 				.card-container.card-flipped .card {
 					-webkit-transform: rotateY(180deg);
@@ -108,6 +103,7 @@
 
 				.back {
 					z-index: 2;
+					cursor: pointer;
 				}
 
 				.front {
@@ -120,125 +116,194 @@
 				}
 			</style>
 
-			<style> /*General Page Styles*/
+			<style> 
+				/*General Page Styles*/
+				body {
+					min-width: 400px;
+				}
 				.top-buffer {
 					margin-top: 1em;
 				}
 
+				/*Size Specific General Page Styles*/
 				@media (max-width: 768px) {
 					[class^="col-"]:not(:first-child) {
 						margin-top: 1em;
 					}
 				}
+
+				/*Element Styles*/
+				#timer, #textentry {
+					border-radius: 6px;
+					padding:10px 15px;
+				}
+
+				#timer:after{
+					clear: both;
+					content: "";
+					display: block;
+				}
+
+				#timer-time a.selected:before {
+					content:  "\2713 ";
+				}
+
+				#timer-text {
+					margin-left: 5px;
+					margin-right: 5px;
+				}
+
+				/*Size Specific Element Styles*/
+				@media (max-width: 768px) {
+					.pull-left-sm {
+						float: left !important;
+					}
+				}
 			</style>
 
 			<div class="jumbotron">
-			<div class="row">
-				<div class="col-sm-4">
-					<div class="card-container">
-						<div class="card">
-							<div class="back bg-primary">
-							</div>
-							<div class="front bg-info">
-								<p>Wobble</p>
-							</div>
-						</div>
-					</div>
-				</div> <!-- .col-sm-4 -->
-				<div class="col-sm-4 top-buffer-sm">
-					<div class="card-container">
-						<div class="card">
-							<div class="back bg-primary">
-							</div>
-							<div class="front bg-info">
-								<p>Willow</p>
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="card-container">
+							<div class="card">
+								<div class="back bg-primary">
+								</div>
+								<div class="front bg-info">
+									<p>Wobble</p>
+								</div>
 							</div>
 						</div>
-					</div>
-				</div> <!-- .col-sm-4 -->
-				<div class="col-sm-4 top-buffer-sm">
-					<div class="card-container">
-						<div class="card">
-							<div class="back bg-primary">
-							</div>
-							<div class="front bg-info">
-								<p>Chime</p>
-							</div>
-						</div>
-					</div>
-				</div> <!-- .col-sm-4 -->
-			</div> <!-- /.row -->
-			<div class="row top-buffer hidden-xs hidden-sm">
-				<div class="col-sm-4">
-					<div class="card-container">
-						<div class="card">
-							<div class="back bg-primary">
-							</div>
-							<div class="front bg-info">
-								<p>Song</p>
+					</div> <!-- .col-sm-4 -->
+					<div class="col-sm-4 top-buffer-sm">
+						<div class="card-container">
+							<div class="card">
+								<div class="back bg-primary">
+								</div>
+								<div class="front bg-info">
+									<p>Willow</p>
+								</div>
 							</div>
 						</div>
-					</div>
-				</div> <!-- .col-sm-4 -->
-				<div class="col-sm-4">
-					<div class="card-container">
-						<div class="card">
-							<div class="back bg-primary">
-							</div>
-							<div class="front bg-info">
-								<p>Hesitate</p>
-							</div>
-						</div>
-					</div>
-				</div> <!-- .col-sm-4 -->
-				<div class="col-sm-4">
-					<div class="card-container">
-						<div class="card">
-							<div class="back bg-primary">
-							</div>
-							<div class="front bg-info">
-								<p>Blind</p>
+					</div> <!-- .col-sm-4 -->
+					<div class="col-sm-4 top-buffer-sm">
+						<div class="card-container">
+							<div class="card">
+								<div class="back bg-primary">
+								</div>
+								<div class="front bg-info">
+									<p>Chime</p>
+								</div>
 							</div>
 						</div>
-					</div>
-				</div> <!-- .col-sm-4 -->
-			</div> <!-- /.row -->
-			<div class="row top-buffer hidden-xs hidden-sm">
-				<div class="col-sm-4">
-					<div class="card-container">
-						<div class="card">
-							<div class="back bg-primary">
-							</div>
-							<div class="front bg-info">
-								<p>Squeak</p>
-							</div>
-						</div>
-					</div>
-				</div> <!-- .col-sm-4 -->
-				<div class="col-sm-4">
-					<div class="card-container">
-						<div class="card">
-							<div class="back bg-primary">
-							</div>
-							<div class="front bg-info">
-								<p>Powder</p>
+					</div> <!-- .col-sm-4 -->
+				</div> <!-- /.row -->
+				<div class="row top-buffer hidden-xs hidden-sm">
+					<div class="col-sm-4">
+						<div class="card-container">
+							<div class="card">
+								<div class="back bg-primary">
+								</div>
+								<div class="front bg-info">
+									<p>Song</p>
+								</div>
 							</div>
 						</div>
-					</div>
-				</div> <!-- .col-sm-4 -->
-				<div class="col-sm-4">
-					<div class="card-container">
-						<div class="card">
-							<div class="back bg-primary">
-							</div>
-							<div class="front bg-info">
-								<p>Fleece</p>
+					</div> <!-- .col-sm-4 -->
+					<div class="col-sm-4">
+						<div class="card-container">
+							<div class="card">
+								<div class="back bg-primary">
+								</div>
+								<div class="front bg-info">
+									<p>Hesitate</p>
+								</div>
 							</div>
 						</div>
-					</div>
-				</div> <!-- .col-sm-4 -->
-			</div> <!-- /.row -->
+					</div> <!-- .col-sm-4 -->
+					<div class="col-sm-4">
+						<div class="card-container">
+							<div class="card">
+								<div class="back bg-primary">
+								</div>
+								<div class="front bg-info">
+									<p>Blind</p>
+								</div>
+							</div>
+						</div>
+					</div> <!-- .col-sm-4 -->
+				</div> <!-- /.row -->
+				<div class="row top-buffer hidden-xs hidden-sm">
+					<div class="col-sm-4">
+						<div class="card-container">
+							<div class="card">
+								<div class="back bg-primary">
+								</div>
+								<div class="front bg-info">
+									<p>Squeak</p>
+								</div>
+							</div>
+						</div>
+					</div> <!-- .col-sm-4 -->
+					<div class="col-sm-4">
+						<div class="card-container">
+							<div class="card">
+								<div class="back bg-primary">
+								</div>
+								<div class="front bg-info">
+									<p>Powder</p>
+								</div>
+							</div>
+						</div>
+					</div> <!-- .col-sm-4 -->
+					<div class="col-sm-4">
+						<div class="card-container">
+							<div class="card">
+								<div class="back bg-primary">
+								</div>
+								<div class="front bg-info">
+									<p>Fleece</p>
+								</div>
+							</div>
+						</div>
+					</div> <!-- .col-sm-4 -->
+				</div> <!-- /.row -->
+				<div class="row top-buffer">
+					<a id="card-reset" class="btn btn-primary pull-right invisible">Reset</a>
+				</div>
 			</div> <!-- /.jumbotron -->
+
+			<div class="row top-buffer">
+				<div class="col-md-4">
+					<div id="timer" class="bg-info">
+						<h4 class="pull-left-sm">CountDown Timer: </h4>
+						<div id="timer-time" class="dropdown pull-left-sm">
+							<button class="btn btn-default dropdown-toggle pull-left" type="button" data-toggle="dropdown">
+								Writing Time
+								<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu">
+							<li><a tabindex="-1" minutes="1">1 minute</a></li>
+							<li><a tabindex="-1" minutes="5">5 minutes</a></li>
+							<li><a tabindex="-1" minutes="10">10 minutes</a></li>
+							<li><a tabindex="-1" minutes="15">15 minutes</a></li>
+							<li><a tabindex="-1" minutes="30">30 minutes</a></li>
+							<!-- <li class="divider"></li> -->
+							<!-- <li><a tabindex="-1">Custom</a></li> -->
+						</div><!-- .dropdown -->
+						<h4 id="timer-text" class="pull-left">00:00</h4>
+						<button id="timer-start" type="button" class="btn btn-primary pull-left disabled">Start</button>
+						<button id="timer-end" type="button" class="btn btn-danger pull-left hidden">Stop</button>
+					</div>
+				</div>
+				<div class="col-md-8"/>
+					<div id="textentry" class="bg-info">
+						<h4>Express yourself!</h4>
+						<form>
+							<textarea name="editor1" id="editor1" rows="60" cols="80"></textarea>
+						</form>
+					</div>
+				</div>
+			</div> <!-- /.row -->
 
 			<hr>
 			<div class="footer clearfix">
@@ -251,12 +316,108 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bootstrap/js/bootstrap.min.js"></script>
 
+    <!-- CKE Editor -->
+    <script src="https://cdn.ckeditor.com/4.4.3/basic/ckeditor.js"></script>
+
 		<script type="text/javascript">
-			$(document).ready(
+			$(document).ready(function(){
+        CKEDITOR.replace('editor1', {height: '30em',});
+
 				$('.card-container').click(function() {
-					$(this).toggleClass('card-flipped');
-				})
-			);
+					var flippedCount = $('.card-flipped').length;
+
+					if (flippedCount <= 2) {
+						$(this).toggleClass('card-flipped');
+					}
+					if (flippedCount == 2) {
+						setTimeout(function(){
+							$('#card-reset').toggleClass('invisible');
+						}, 600);
+					}
+				});
+
+				$('#card-reset').click(function() {
+					$('#card-reset').toggleClass('invisible');
+					$('.card-flipped').toggleClass('card-flipped');
+				});
+
+				function countdownTimer(timeToElapse, $displayElement, onStart, onFinish) {
+					// Helper Function for rendering remaining time on Page
+					function renderCountDownText(timeCounter) {
+						var minutes = Math.floor(timeCounter / 60);
+						var seconds = Math.floor(timeCounter % 60);
+
+						minutes = ((minutes < 10) ? '0' : '') + minutes;
+						seconds = ((seconds < 10) ? '0' : '') + seconds;
+
+						$displayElement.text(minutes +':'+seconds);
+					}
+
+					// Trigger onStart callback if specified
+					if (onStart) {
+						onStart();
+					}
+
+					// initialize countdown variable and display
+					var timeCounter = timeToElapse;
+					renderCountDownText(timeCounter);
+
+					// Initialize interval variable and repeat each second
+					var countDownTimer = setInterval(function(){
+						timeCounter--;
+						renderCountDownText(timeCounter);
+
+						// when countdown reaches zero, clear interval variable
+						if (timeCounter == 0) {
+							clearInterval(countDownTimer);
+							// $displayElement.text('Times up!!');
+							renderCountDownText(timeCounter);
+
+							// Trigger onFinish callback if specified
+							if (onFinish) {
+								onFinish();
+							}
+						}
+					}, 1000);
+				}
+
+				$('#timer-time a').click(function() {
+					$('#timer-time a').toggleClass('selected', false);
+					$(this).toggleClass('selected');
+
+					// Set display element attribute and display text
+					var newMinutes = $(this).attr('minutes');
+					var $displayElement = $('#timer-text');
+					$displayElement.attr('minutes', newMinutes);
+					$displayElement.text(((newMinutes < 10) ? '0' : '') + newMinutes +':00');
+
+					// Enable start button
+					$('#timer-start').toggleClass('disabled', false); 
+				});
+
+				$('#timer-start').click(function() {
+					var $controlElement = $('#timer-time button')
+					var $startElement   = $(this);
+					var $endElement     = $('#timer-end');
+					var $displayElement = $('#timer-text');
+					var timeToElapse = $displayElement.attr('minutes') * 60;
+
+					var enableControls = function(enable){ 
+						$controlElement.toggleClass('disabled', !enable); 
+						$startElement.toggleClass('hidden', !enable); 
+						$endElement.toggleClass('hidden', enable); 
+					}
+
+					if (timeToElapse) {
+						countdownTimer(
+							timeToElapse, 
+							$displayElement, 
+							function() { enableControls(false) },
+							function() { enableControls(true) }
+						);
+					}
+				});
+			});
 		</script>
   </body>
 </html>

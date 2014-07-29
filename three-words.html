@@ -66,6 +66,7 @@
 				.card-container, .front, .back {
 					height: 9em;
 					width: 100%;
+					max-width: 260px;
 				}
 
 				.card-container.card-flipped .card {
@@ -153,18 +154,61 @@
 					margin-right: 5px;
 				}
 
-				/*Size Specific Element Styles*/
-				@media (max-width: 768px) {
+				/*-- Size Specific Element Styles --*/
+				/* Extra Small */
+				@media (max-width: 767px) {
+					.pull-left-xs {
+						float: left !important;
+					}
+					.pull-right-xs {
+						float: right !important;
+					}
+					.top-buffer-xs {
+						margin-top: 1em;
+					}
+				}
+				/* Small */
+				@media (min-width: 768px) and (max-width: 991px) {
 					.pull-left-sm {
 						float: left !important;
+					}
+					.pull-right-sm {
+						float: right !important;
+					}
+					.top-buffer-sm {
+						margin-top: 1em;
+					}
+				}
+				/* Medium */
+				@media (min-width: 992px) and (max-width: 1199px) {
+					.pull-left-md {
+						float: left !important;
+					}
+					.pull-right-md {
+						float: right !important;
+					}
+					.top-buffer-md {
+						margin-top: 1em;
+					}
+				}
+				/* Large */
+				@media (min-width: 1200px) {
+					.pull-left-lg {
+						float: left !important;
+					}
+					.pull-right-lg {
+						float: right !important;
+					}
+					.top-buffer-lg {
+						margin-top: 1em;
 					}
 				}
 			</style>
 
 			<div class="jumbotron">
 				<div class="row">
-					<div class="col-sm-4">
-						<div class="card-container">
+					<div class="col-sm-6 col-md-4 col-lg-3">
+						<div class="card-container center-block">
 							<div class="card">
 								<div class="back bg-primary">
 								</div>
@@ -173,9 +217,9 @@
 								</div>
 							</div>
 						</div>
-					</div> <!-- .col-sm-4 -->
-					<div class="col-sm-4 top-buffer-sm">
-						<div class="card-container">
+					</div> <!-- .col -->
+					<div class="col-sm-6 col-md-4 col-lg-3">
+						<div class="card-container center-block">
 							<div class="card">
 								<div class="back bg-primary">
 								</div>
@@ -184,9 +228,9 @@
 								</div>
 							</div>
 						</div>
-					</div> <!-- .col-sm-4 -->
-					<div class="col-sm-4 top-buffer-sm">
-						<div class="card-container">
+					</div> <!-- .col -->
+					<div class="col-sm-6 col-md-4 col-lg-3 top-buffer-sm">
+						<div class="card-container center-block">
 							<div class="card">
 								<div class="back bg-primary">
 								</div>
@@ -195,90 +239,120 @@
 								</div>
 							</div>
 						</div>
-					</div> <!-- .col-sm-4 -->
+					</div> <!-- .col -->
+					<div class="col-sm-6 col-md-4 col-lg-3 top-buffer-sm top-buffer-md">
+						<div class="card-container center-block">
+							<div class="card">
+								<div class="back bg-primary">
+								</div>
+								<div class="front bg-info">
+									<p>Chime</p>
+								</div>
+							</div>
+						</div>
+					</div> <!-- .col-->
+					<div class="col-sm-6 col-md-4 col-lg-3 hidden-xs top-buffer-sm top-buffer-md top-buffer-lg">
+						<div class="card-container center-block">
+							<div class="card">
+								<div class="back bg-primary">
+								</div>
+								<div class="front bg-info">
+									<p>Chime</p>
+								</div>
+							</div>
+						</div>
+					</div> <!-- .col-->
+					<div class="col-sm-6 col-md-4 col-lg-3 hidden-xs top-buffer-sm top-buffer-md top-buffer-lg">
+						<div class="card-container center-block">
+							<div class="card">
+								<div class="back bg-primary">
+								</div>
+								<div class="front bg-info">
+									<p>Chime</p>
+								</div>
+							</div>
+						</div>
+					</div> <!-- .col-->
+					<div class="col-sm-6 col-md-4 col-lg-3 hidden-xs hidden-sm top-buffer-md top-buffer-lg">
+						<div class="card-container center-block">
+							<div class="card">
+								<div class="back bg-primary">
+								</div>
+								<div class="front bg-info">
+									<p>Chime</p>
+								</div>
+							</div>
+						</div>
+					</div> <!-- .col-->
+					<div class="col-sm-6 col-md-4 col-lg-3 hidden-xs hidden-sm top-buffer-md top-buffer-lg">
+						<div class="card-container center-block">
+							<div class="card">
+								<div class="back bg-primary">
+								</div>
+								<div class="front bg-info">
+									<p>Chime</p>
+								</div>
+							</div>
+						</div>
+					</div> <!-- .col-->
+					<div class="col-sm-6 col-md-4 col-lg-3 hidden-xs hidden-sm top-buffer-md top-buffer-lg">
+						<div class="card-container center-block">
+							<div class="card">
+								<div class="back bg-primary">
+								</div>
+								<div class="front bg-info">
+									<p>Chime</p>
+								</div>
+							</div>
+						</div>
+					</div> <!-- .col-->
+					<div class="col-sm-6 col-md-4 col-lg-3 visible-lg top-buffer-lg">
+						<div class="card-container center-block">
+							<div class="card">
+								<div class="back bg-primary">
+								</div>
+								<div class="front bg-info">
+									<p>Chime</p>
+								</div>
+							</div>
+						</div>
+					</div> <!-- .col-->
+					<div class="col-sm-6 col-md-4 col-lg-3 visible-lg top-buffer-lg">
+						<div class="card-container center-block">
+							<div class="card">
+								<div class="back bg-primary">
+								</div>
+								<div class="front bg-info">
+									<p>Chime</p>
+								</div>
+							</div>
+						</div>
+					</div> <!-- .col-->
+					<div class="col-sm-6 col-md-4 col-lg-3 visible-lg top-buffer-lg">
+						<div class="card-container center-block">
+							<div class="card">
+								<div class="back bg-primary">
+								</div>
+								<div class="front bg-info">
+									<p>Chime</p>
+								</div>
+							</div>
+						</div>
+					</div> <!-- .col-->
 				</div> <!-- /.row -->
-				<div class="row top-buffer hidden-xs hidden-sm">
-					<div class="col-sm-4">
-						<div class="card-container">
-							<div class="card">
-								<div class="back bg-primary">
-								</div>
-								<div class="front bg-info">
-									<p>Song</p>
-								</div>
-							</div>
-						</div>
-					</div> <!-- .col-sm-4 -->
-					<div class="col-sm-4">
-						<div class="card-container">
-							<div class="card">
-								<div class="back bg-primary">
-								</div>
-								<div class="front bg-info">
-									<p>Hesitate</p>
-								</div>
-							</div>
-						</div>
-					</div> <!-- .col-sm-4 -->
-					<div class="col-sm-4">
-						<div class="card-container">
-							<div class="card">
-								<div class="back bg-primary">
-								</div>
-								<div class="front bg-info">
-									<p>Blind</p>
-								</div>
-							</div>
-						</div>
-					</div> <!-- .col-sm-4 -->
-				</div> <!-- /.row -->
-				<div class="row top-buffer hidden-xs hidden-sm">
-					<div class="col-sm-4">
-						<div class="card-container">
-							<div class="card">
-								<div class="back bg-primary">
-								</div>
-								<div class="front bg-info">
-									<p>Squeak</p>
-								</div>
-							</div>
-						</div>
-					</div> <!-- .col-sm-4 -->
-					<div class="col-sm-4">
-						<div class="card-container">
-							<div class="card">
-								<div class="back bg-primary">
-								</div>
-								<div class="front bg-info">
-									<p>Powder</p>
-								</div>
-							</div>
-						</div>
-					</div> <!-- .col-sm-4 -->
-					<div class="col-sm-4">
-						<div class="card-container">
-							<div class="card">
-								<div class="back bg-primary">
-								</div>
-								<div class="front bg-info">
-									<p>Fleece</p>
-								</div>
-							</div>
-						</div>
-					</div> <!-- .col-sm-4 -->
-				</div> <!-- /.row -->
+
 				<div class="row top-buffer">
 					<a id="card-reset" class="btn btn-primary pull-right invisible">Reset</a>
 				</div>
 			</div> <!-- /.jumbotron -->
 
-			<div class="row top-buffer">
-				<div class="col-md-4">
+			<div class="row top-buffer-sm top-buffer-md top-buffer-lg">
+				<div class="col-md-4 pull-right-md pull-right-lg">
 					<div id="timer" class="bg-info">
 						<h4 class="pull-left-sm">CountDown Timer: </h4>
 						<div id="timer-time" class="dropdown pull-left-sm">
 							<button class="btn btn-default dropdown-toggle pull-left" type="button" data-toggle="dropdown">
-								Writing Time
+								Writing Time: 
 								<span class="caret"></span>
 							</button>
 							<ul class="dropdown-menu">
@@ -291,11 +365,11 @@
 							<!-- <li><a tabindex="-1">Custom</a></li> -->
 						</div><!-- .dropdown -->
 						<h4 id="timer-text" class="pull-left">00:00</h4>
-						<button id="timer-start" type="button" class="btn btn-primary pull-left disabled">Start</button>
+						<button id="timer-start" type="button" class="btn btn-primary pull-left hidden">Start</button>
 						<button id="timer-end" type="button" class="btn btn-danger pull-left hidden">Stop</button>
 					</div>
 				</div>
-				<div class="col-md-8"/>
+				<div class="col-md-8 top-buffer-sm pull-left-md pull-left-lg"/>
 					<div id="textentry" class="bg-info">
 						<h4>Express yourself!</h4>
 						<form>
@@ -319,14 +393,35 @@
     <!-- CKE Editor -->
     <script src="https://cdn.ckeditor.com/4.4.3/basic/ckeditor.js"></script>
 
+    <!-- Words DataSource -->
+    <script src="js/words.js"></script>
+
 		<script type="text/javascript">
 			$(document).ready(function(){
+			function Stack()
+			{
+				this.stac=new Array();
+				this.pop=function(){
+					return this.stac.pop();
+				}
+				this.push=function(item){
+					this.stac.push(item);
+				}
+			}
+
+				// Set up words_list stack object
+				var words_list = new Stack();
+				for (var i = datasource_words.length - 1; i >= 0; i--) {
+					words_list.push(datasource_words[i]);
+				};
+
         CKEDITOR.replace('editor1', {height: '30em',});
 
 				$('.card-container').click(function() {
 					var flippedCount = $('.card-flipped').length;
 
 					if (flippedCount <= 2) {
+						$(this).find('.front p').text(words_list.pop());
 						$(this).toggleClass('card-flipped');
 					}
 					if (flippedCount == 2) {
@@ -363,14 +458,14 @@
 					renderCountDownText(timeCounter);
 
 					// Initialize interval variable and repeat each second
-					var countDownTimer = setInterval(function(){
+					$displayElement.data("__countDownTimer", setInterval(function(){
+					// var countDownTimer = setInterval(function(){
 						timeCounter--;
 						renderCountDownText(timeCounter);
 
 						// when countdown reaches zero, clear interval variable
 						if (timeCounter == 0) {
-							clearInterval(countDownTimer);
-							// $displayElement.text('Times up!!');
+							clearInterval($displayElement.data("__countDownTimer"));
 							renderCountDownText(timeCounter);
 
 							// Trigger onFinish callback if specified
@@ -378,7 +473,7 @@
 								onFinish();
 							}
 						}
-					}, 1000);
+					}, 1000));
 				}
 
 				$('#timer-time a').click(function() {
@@ -392,7 +487,7 @@
 					$displayElement.text(((newMinutes < 10) ? '0' : '') + newMinutes +':00');
 
 					// Enable start button
-					$('#timer-start').toggleClass('disabled', false); 
+					$('#timer-start').toggleClass('hidden', false); 
 				});
 
 				$('#timer-start').click(function() {
@@ -406,6 +501,10 @@
 						$controlElement.toggleClass('disabled', !enable); 
 						$startElement.toggleClass('hidden', !enable); 
 						$endElement.toggleClass('hidden', enable); 
+
+						if (enable) {
+							alert("Time's up!!");
+						}
 					}
 
 					if (timeToElapse) {
@@ -416,6 +515,23 @@
 							function() { enableControls(true) }
 						);
 					}
+				});
+
+				$('#timer-end').click(function() {
+					var $controlElement = $('#timer-time button')
+					var $startElement   = $('#timer-start');
+					var $endElement     = $(this);
+					var $displayElement = $('#timer-text');
+					var minutes = $displayElement.attr('minutes');
+
+					var countdownTimer = $displayElement.data("__countDownTimer");
+					clearInterval(countdownTimer);
+
+					// $displayElement.text(((minutes < 10) ? '0' : '') + minutes +':00');
+
+					$controlElement.toggleClass('disabled', false); 
+					$startElement.toggleClass('hidden', false); 
+					$endElement.toggleClass('hidden', true);
 				});
 			});
 		</script>
